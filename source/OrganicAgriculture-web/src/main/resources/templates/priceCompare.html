@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-    <head>
-		<title>OrganicAgriculture Admin-index</title>
-        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}" />
-        <link rel="stylesheet" th:href="@{/css/crawler.css}" />
-        <link rel="stylesheet" th:href="@{/font-awesome/css/font-awesome.min.css}" />
-        <meta name="ctx" th:content="${#httpServletRequest.getContextPath()}" />
-    </head>
+
+	<head th:replace="layout/header :: head"></head>
     <body>
 	<div id="wrapper">
 		<nav class="navbar navbar-default navbar-static-top" role="navigation"
@@ -91,13 +86,11 @@
 
 	</div>
 	
-	<input type="hidden" th:value="${#httpServletRequest.getContextPath()}" id="ctx"/>
+	<!-- import html layout/footer.html -->
+	<div th:include="layout/footer :: footer"></div>
 	<input type="hidden" th:value="${pno}" id="pno"/>
-    
-	<script type="text/javascript" th:src="@{/jquery/jquery.min.js}"></script>
 	<script type="text/javascript" th:src="@{/jquery/jquery-dateFormat.min.js}"></script>
-	<script type="text/javascript" th:src="@{/js/priceComare.js}"></script>
-	<script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
 	<script type="text/javascript" th:src="@{/js/highcharts.js}"></script>
+	<script type="text/javascript" th:src="@{/js/priceComare.js}"></script>
     </body>
 </html>

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.organic.agriculture.common.exception.OrganicAgrException;
 import com.organic.agriculture.entity.ProductBaseInfo;
 import com.organic.agriculture.service.ProductInfoService;
 
@@ -32,5 +33,10 @@ public class RestFulController {
 		List<ProductBaseInfo> productList = service.getProductAllPricesByPno(pno);
 		return productList;
 	}
+
+    @RequestMapping("/json")
+    public String json() throws OrganicAgrException {
+        throw new OrganicAgrException("发生错误2");
+    }
 
 }

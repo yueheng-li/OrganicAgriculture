@@ -1,4 +1,6 @@
-spring boot actuator追加（监控运行状况）
+
+
+## spring boot actuator追加（监控运行状况）
 
 pom.xml 下面jar依赖添加
 
@@ -15,6 +17,14 @@ http://localhost:8080/organic/health
 ```
 
 ## 系统构建图
+### OrganicAgriculture-LoadBalanced
+Zuul和Feign实现sample做成。
+
+### OrganicAgriculture-EurekaServer
+Eureka服务注册实现sample做成。
+
+### OrganicAgriculture-EurekaClient
+服务客户端(世界的服务)实现sample做成。
 
 * Eureka：实际上在整个过程中维护者每个服务的生命周期。每一个服务都要被注册到Eureka服务器上，这里被注册到Eureka的服务又称为Client。Eureka通过心跳来确定服务是否正常。Eureka只做请求转发。同时Eureka是支持集群。
 * Zuul：类似于网关，反向代理。为外部请求提供统一入口。 

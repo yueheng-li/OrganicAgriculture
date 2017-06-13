@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-    <head>
-		<title>OrganicAgriculture Admin-table</title>
-		<meta name="ctx" th:content="${#httpServletRequest.getContextPath()}" />
-        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}" />
-        <link rel="stylesheet" th:href="@{/css/crawler.css}" />
-        <link rel="stylesheet" th:href="@{/font-awesome/css/font-awesome.min.css}" />
-        <link rel="stylesheet" th:href="@{/css/jquery.dataTables.min.css}" />
-</head>
-
+<!-- import html layout/header.html -->
+<head th:replace="layout/header :: head"></head>
 <body>
 
     <div id="wrapper">
@@ -84,11 +77,9 @@
         <!-- /#page-wrapper -->
     </div>
     <!-- /#wrapper -->
-	<input type="hidden" th:value="${#httpServletRequest.getContextPath()}" id="ctx"/>
-
-	<script type="text/javascript" th:src="@{/jquery/jquery.min.js}"></script>
-	<script type="text/javascript" th:src="@{/js/table.js}"></script>
-	<script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+	<!-- import html layout/footer.html -->
+	<div th:include="layout/footer :: footer"></div>
 	<script type="text/javascript" th:src="@{/jquery/jquery.dataTables.min.js}"></script>
+	<script type="text/javascript" th:src="@{/js/table.js}"></script>
 </body>
 </html>

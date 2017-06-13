@@ -181,5 +181,12 @@ public class IndexController {
 				bos.close();
 		}
 	}
+	
+
+	@RequestMapping(value = "/ex")
+	public String exception() throws Exception {
+		throw new Exception("发生错误");
+	}
+	
 
 }

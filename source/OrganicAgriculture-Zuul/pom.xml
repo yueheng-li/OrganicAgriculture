@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>organic.agriculture</groupId>
-	<artifactId>loadBalanced</artifactId>
+	<artifactId>zuul</artifactId>
 	<version>1.0.0</version>
-	<name>OrganicAgriculture-loadBalanced</name>
+	<name>OrganicAgriculture-zuul</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -21,43 +21,15 @@
 
 
 	<dependencies>
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework.cloud</groupId> -->
-		<!-- <artifactId>spring-cloud-starter-ribbon</artifactId> -->
-		<!-- </dependency> -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zuul</artifactId>
-		</dependency>
-		<!-- feign -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-feign</artifactId>
-		</dependency>
-		<!-- hystrix -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-hystrix</artifactId>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.hdrhistogram/HdrHistogram -->
-		<dependency>
-			<groupId>org.hdrhistogram</groupId>
-			<artifactId>HdrHistogram</artifactId>
-			<version>2.1.9</version>
 		</dependency>
 
 		<dependency>
 			<!-- eureka client -->
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -78,28 +50,26 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!-- defined in spring-cloud-starter-parent pom (as documentation hint), 
-					but needs to be repeated here -->
-				<configuration>
-					<requiresUnpack>
-						<dependency>
-							<groupId>com.netflix.eureka</groupId>
-							<artifactId>eureka-core</artifactId>
-						</dependency>
-						<dependency>
-							<groupId>com.netflix.eureka</groupId>
-							<artifactId>eureka-client</artifactId>
-						</dependency>
-					</requiresUnpack>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	<!-- <build> -->
+	<!-- <plugins> -->
+	<!-- <plugin> -->
+	<!-- <groupId>org.springframework.boot</groupId> -->
+	<!-- <artifactId>spring-boot-maven-plugin</artifactId> -->
+	<!-- <configuration> -->
+	<!-- <requiresUnpack> -->
+	<!-- <dependency> -->
+	<!-- <groupId>com.netflix.eureka</groupId> -->
+	<!-- <artifactId>eureka-core</artifactId> -->
+	<!-- </dependency> -->
+	<!-- <dependency> -->
+	<!-- <groupId>com.netflix.eureka</groupId> -->
+	<!-- <artifactId>eureka-client</artifactId> -->
+	<!-- </dependency> -->
+	<!-- </requiresUnpack> -->
+	<!-- </configuration> -->
+	<!-- </plugin> -->
+	<!-- </plugins> -->
+	<!-- </build> -->
 
 
 	<repositories>

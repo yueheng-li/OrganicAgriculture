@@ -1,5 +1,25 @@
-
 # 有机农业系统
+## 工程构成
+### OrganicAgriculture-dao
+DB端的服务
+
+### OrganicAgriculture-web
+前端画面
+
+### OrganicAgriculture-Job
+后端batch，未作成。
+
+## 微服务架构
+### OrganicAgriculture-LoadBalanced
+Zuul和Feign实现sample做成。
+
+### OrganicAgriculture-EurekaServer
+Eureka服务注册实现sample做成。
+
+### OrganicAgriculture-EurekaClient
+服务客户端(世界的服务)实现sample做成。
+
+
 
 ## spring boot actuator追加（监控运行状况）
 
@@ -25,14 +45,4 @@ http://localhost:8080/organic/health
 * Hystrix：断路器，服务调用通常是深层的，一个底层服务通常为多个上层服务提供服务，那么如果底层服务失败则会造成大面积失败，Hystrix就是就调用失败后触发定义好的处理方法，从而更友好的解决出错。也是微服务的容错机制。
 
 ![image](https://github.com/yueheng-li/OrganicAgriculture/blob/devlop/source/springcloud.PNG)
-
-
-### OrganicAgriculture-LoadBalanced
-Zuul和Feign实现sample做成。
-
-### OrganicAgriculture-EurekaServer
-Eureka服务注册实现sample做成。
-
-### OrganicAgriculture-EurekaClient
-服务客户端(世界的服务)实现sample做成。
 

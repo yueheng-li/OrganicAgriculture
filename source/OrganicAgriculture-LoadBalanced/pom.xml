@@ -21,15 +21,29 @@
 
 
 	<dependencies>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.springframework.cloud</groupId> -->
-<!-- 			<artifactId>spring-cloud-starter-ribbon</artifactId> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.cloud</groupId> -->
+		<!-- <artifactId>spring-cloud-starter-ribbon</artifactId> -->
+		<!-- </dependency> -->
+		<!-- feign -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-feign</artifactId>
 		</dependency>
+		<!-- hystrix -->
 		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hdrhistogram/HdrHistogram -->
+		<dependency>
+			<groupId>org.hdrhistogram</groupId>
+			<artifactId>HdrHistogram</artifactId>
+			<version>2.1.9</version>
+		</dependency>
+
+		<dependency>
+			<!-- eureka client -->
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
@@ -37,10 +51,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-	    <dependency>
-	        <groupId>org.springframework.boot</groupId>
-	        <artifactId>spring-boot-starter-web</artifactId>
-	    </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -82,8 +96,8 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	
+
+
 	<repositories>
 		<repository>
 			<id>repo.spring.io-milestones</id>
@@ -101,17 +115,17 @@
 	</repositories>
 
 	<pluginRepositories>
-        <pluginRepository>
-            <id>spring-libs-snapshots</id>
-            <url>https://repo.spring.io/libs-snapshot-local</url>
+		<pluginRepository>
+			<id>spring-libs-snapshots</id>
+			<url>https://repo.spring.io/libs-snapshot-local</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>spring-libs-milestones</id>
-            <url>https://repo.spring.io/libs-milestone-local</url>
-        </pluginRepository>
+		</pluginRepository>
+		<pluginRepository>
+			<id>spring-libs-milestones</id>
+			<url>https://repo.spring.io/libs-milestone-local</url>
+		</pluginRepository>
 		<pluginRepository>
 			<id>spring-libs-release</id>
 			<url>https://repo.spring.io/libs-release-local</url>

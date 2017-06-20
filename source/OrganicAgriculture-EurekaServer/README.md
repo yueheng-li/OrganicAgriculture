@@ -8,7 +8,7 @@
 * cp eurekaServer-1.0.0.jar and Dockerfile to /opt/docker-file/mirco-service
 * cd /opt/docker-file/mirco-service
 * docker build -t lichunhui:v1 .
-··· java
+### 
 Digest: sha256:34959eed5df6bfe74a17fbf459ed29505d51a48d5cb4a39f215b613c65b8023b
 Status: Downloaded newer image for java:8
  ---> d11c3799fa6a
@@ -28,7 +28,7 @@ Step 4 : ENTRYPOINT java -Djava.security.egd=file:/dev/./urandom -jar /app.jar
  ---> c9a3ee7e48bb
 Removing intermediate container 9d36eabd2e5e
 Successfully built c9a3ee7e48bb
-···
+### 
 
 * docker run -d -p 8761:8761 lichunhui:v1
 * docker ps

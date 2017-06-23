@@ -1,4 +1,4 @@
-package com.organic.agriculture.filter;
+package com.organic.agriculture.web.filter;
 
 import java.io.IOException;
 
@@ -39,17 +39,17 @@ public class AccessFilter extends ZuulFilter {
 		HttpServletRequest request = ctx.getRequest();
 		Object accessToken = request.getParameter("accessToken");
 		
-		String token = request.getParameter("token");
-		if ("POST".equalsIgnoreCase(request.getMethod())) {
-			try {
-				token = CharStreams.toString(request.getReader());
-			} catch (IOException e) {
-				token = null;
-			}
-	    }
-		if (token != null && token.length() > 0) {
-			ResponseEntity<String> resp = computeClient.authenticate(token);
-		}
+//		String token = request.getParameter("token");
+//		if ("POST".equalsIgnoreCase(request.getMethod())) {
+//			try {
+//				token = CharStreams.toString(request.getReader());
+//			} catch (IOException e) {
+//				token = null;
+//			}
+//	    }
+//		if (token != null && token.length() > 0) {
+//			ResponseEntity<String> resp = computeClient.authenticate(token);
+//		}
 		if (accessToken == null) {
 
 			ctx.setSendZuulResponse(false);

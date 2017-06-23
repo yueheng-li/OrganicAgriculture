@@ -1,31 +1,31 @@
-package com.organic.agriculture;
+package com.organic.agriculture.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
-import com.organic.agriculture.filter.AccessFilter;
+import com.organic.agriculture.web.filter.AccessFilter;
 
-@EnableZuulProxy
-@SpringCloudApplication
+@ComponentScan(basePackages = {"com.organic.agriculture.web"})
 @SpringBootApplication
-@EnableDiscoveryClient
 @EnableFeignClients
-public class LoadBalancedApplication {
-//	@Bean
-//	@LoadBalanced
-//	RestTemplate restTemplate() {
-//		return new RestTemplate();
-//	}
+@EnableZuulProxy
+@EnableDiscoveryClient
+public class LoadBalancedApplication extends SpringBootServletInitializer {
+
 	public static void main(String[] args) {
 		SpringApplication.run(LoadBalancedApplication.class, args);
 	}
-    @Bean
-    public AccessFilter accessFilter() {
-        return new AccessFilter();
-    }
+
+	@Bean
+	public AccessFilter accessFilter() {
+		return new AccessFilter();
+	}
+	
+	
 }

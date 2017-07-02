@@ -2,10 +2,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <body>
-	<footer>
-		<input type="hidden" th:value="${#httpServletRequest.getContextPath()}" id="ctx"/>
-		<script type="text/javascript" th:src="@{/jquery/jquery.min.js}"></script>
-		<script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+	<footer class="color-inher">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3 m-b-xs-30">
+						<h3 class="title">信息</h3>
+						<ul>
+							<li><a href="#">关于我们</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3 m-b-xs-30">
+						<h3 class="title">我的账户</h3>
+						<ul>
+							<li><a href="#">我的账户</a></li>
+							<li><a href="#">订单历史</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-3 m-b-xs-30">
+						<h3 class="title"></h3>
+						<ul>
+						</ul>
+					</div>
+					<div class="col-sm-3 m-b-xs-30">
+						<h3 class="title"></h3>
+						<ul>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<p>Copyright &copy; 2017.chunhui.li All rights reserved.<a target="_blank" href=""></a></p>
+			</div>
+		</div>
 	</footer>
 </body>
 </html>

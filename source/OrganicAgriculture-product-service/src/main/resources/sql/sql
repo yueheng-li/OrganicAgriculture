@@ -1,0 +1,33 @@
+-- local mysql start
+-- mysqld --defaults-file=C:\lichunhui\mysql-5.6.36-winx64\my.ini --console
+-- create database prdouctService;
+-- use prdouctService;
+Drop table `prdouctService`.`product`;
+CREATE TABLE `product` (
+	`product_no` VARCHAR(50) NOT NULL COLLATE 'utf8_unicode_ci',
+	`product_name` VARCHAR(250) NOT NULL COLLATE 'utf8_unicode_ci',
+	`product_original_price` DECIMAL(5, 2)  NOT NULL COLLATE 'utf8_unicode_ci',
+	`product_price` DECIMAL(5, 2)  NOT NULL COLLATE 'utf8_unicode_ci',
+	`product_specifications` VARCHAR(10) NOT NULL COLLATE 'utf8_unicode_ci',
+	`product_image_url` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8_unicode_ci',
+	`product_explain` VARCHAR(500) NULL DEFAULT NULL COLLATE 'utf8_unicode_ci',
+	`product_descript` VARCHAR(500) NULL DEFAULT NULL COLLATE 'utf8_unicode_ci',
+	`category` VARCHAR(500) NULL DEFAULT NULL COLLATE 'utf8_unicode_ci',
+	`create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`create_by` VARCHAR(10) NOT NULL DEFAULT '-1' COLLATE 'utf8_unicode_ci',
+	`update_time` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+	`update_by` VARCHAR(10) NOT NULL DEFAULT '-1' COLLATE 'utf8_unicode_ci',
+	PRIMARY KEY (`product_no`)
+)
+COLLATE='utf8_unicode_ci'
+ENGINE=InnoDB
+;
+
+
+
+
+
+
+
+
+

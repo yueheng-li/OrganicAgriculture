@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yueheng-li/oa-config-repo.git
+#          search-paths: repo
+          username: yueheng-li
+          password: Easy2get
+
+server:
+  port: 1201

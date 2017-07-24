@@ -9,6 +9,12 @@ DB端的服务
 ### OrganicAgriculture-Job
 后端batch，未作成。
 
+### OrganicAgriculture-account-service
+用户的微服务，主要实现用户以及相关信息管理。
+
+### OrganicAgriculture-product-service
+商品的微服务的管理。
+
 ## 微服务架构
 ### OrganicAgriculture-LoadBalanced
 Zuul和Feign实现sample做成。
